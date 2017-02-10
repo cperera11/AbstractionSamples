@@ -14,9 +14,7 @@ public class BankAccount {
     private int AccountNo;
     private double openingBalance;
     private double currentBalance;
-    private BankReportService report;
-    
-
+   
     public BankAccount() {
         
     }
@@ -25,7 +23,6 @@ public class BankAccount {
         setCustomerName(CustomerName);
         setAccountNo(AccountNo);
         setCurrentBalance(currentBalance);
-        report = new BankReportService();
     }
     
             
@@ -62,16 +59,6 @@ public class BankAccount {
         this.AccountNo = AccountNo;
     }
 
-    public BankReportService getReport() {
-        return report;
-    }
-
-    public void setReport(BankReportService report) {
-        this.report = report;
-    }
-    
-    
-    
-    
+   
     
 }

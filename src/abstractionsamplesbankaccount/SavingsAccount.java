@@ -20,8 +20,7 @@ public class SavingsAccount extends IndividualAccount {
        setAccountNo(accountNo);
        setCurrentBalance(currentBalance);
        setInterestRate(intRate);
-     //  report = new BankReportService();
-              
+           
     }
 
     // calculate monthy interest
@@ -33,7 +32,6 @@ public class SavingsAccount extends IndividualAccount {
     public void printReport(){
         BankReportService report = new BankReportService(); 
         report.printReport(getCustomerName() + ", your monthly interest is " + calculateMonthlyInt());
-       
     }
 
     public double getInterestRate() {
@@ -43,12 +41,6 @@ public class SavingsAccount extends IndividualAccount {
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
-//    public BankReportService getReport() {
-//        return report;
-//    }
-//
-//    public void setReport(BankReportService report) {
-//        this.report = report;
-//    }
+
 
 }
