@@ -18,7 +18,11 @@ public class Startup {
         CheckingAccount checkingsAc = new CheckingAccount("Peter Pan", 87654 ,-2100.0,0.5);
         checkingsAc.printReport();
         
+        BankAccount[] accounts ={savingsAc,checkingsAc };
         
+        for(BankAccount ac : accounts){
+        ac.printReport();
+        }
     }
             
     
