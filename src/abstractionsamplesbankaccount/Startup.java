@@ -15,6 +15,8 @@ public class Startup {
         SavingsAccount savingsAc = new SavingsAccount("Bob Smith", 435126 ,4200.0,1.5);
         savingsAc.printReport();
         
+        CheckingAccount checkingsAc = new CheckingAccount("Peter Pan", 87654 ,-2100.0,0.5);
+        checkingsAc.printReport();
         
         
     }
