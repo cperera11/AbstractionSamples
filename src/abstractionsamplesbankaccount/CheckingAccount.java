@@ -11,6 +11,8 @@ package abstractionsamplesbankaccount;
  */
 public class CheckingAccount extends BankAccount {
     
+    private double checkBookFee;
+    
     CheckingAccount(String name, int accountNo, double currentBalance, double overDraftRate) {
        setCustomerName(name);
        setAccountNo(accountNo);
@@ -29,6 +31,14 @@ public class CheckingAccount extends BankAccount {
          temp = getCurrentBalance(); 
         }
         return temp;
+    }
+
+    public double getCheckBookFee() {
+        return checkBookFee;
+    }
+
+    public void setCheckBookFee(double checkBookFee) {
+        this.checkBookFee = checkBookFee;
     }
     
        
