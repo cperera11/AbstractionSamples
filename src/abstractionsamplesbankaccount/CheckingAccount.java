@@ -10,8 +10,7 @@ package abstractionsamplesbankaccount;
  * @author CPere
  */
 public class CheckingAccount extends BankAccount {
-    private double overDraftRate;
-
+    
     CheckingAccount(String name, int accountNo, double currentBalance, double overDraftRate) {
        setCustomerName(name);
        setAccountNo(accountNo);
@@ -27,17 +26,10 @@ public class CheckingAccount extends BankAccount {
          temp = getCurrentBalance() - calculateInt();
         }
         else{
-         temp = getCurrentBalance() + calculateInt(); 
+         temp = getCurrentBalance(); 
         }
         return temp;
     }
     
-    public double getOverDraftRate() {
-        return overDraftRate;
-    }
-
-    public void setOverDraftRate(double overDraftRate) {
-        this.overDraftRate = overDraftRate;
-    }
-    
+       
 }
