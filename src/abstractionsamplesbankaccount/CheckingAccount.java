@@ -9,7 +9,7 @@ package abstractionsamplesbankaccount;
  *
  * @author CPere
  */
-public class CheckingAccount extends BankAccount {
+public class CheckingAccount extends IndividualAccount{
     
     private double checkBookFee;
     
