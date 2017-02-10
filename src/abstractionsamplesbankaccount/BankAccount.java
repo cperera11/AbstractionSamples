@@ -14,6 +14,7 @@ public class BankAccount {
     private int AccountNo;
     private double openingBalance;
     private double currentBalance;
+    private double rate;
    
     public BankAccount() {
         
@@ -25,7 +26,24 @@ public class BankAccount {
         setCurrentBalance(currentBalance);
     }
     
-            
+      // calculate monthy interest
+    public double calculateInt() {
+        return (getCurrentBalance() * getRate())/12;
+         
+    }
+    // calculating current balance
+    public double calculateCurrentBalance() {
+         return calculateInt() + getCurrentBalance();
+    }
+    // print the balance
+    public void printReport(){
+        BankReportService report = new BankReportService(); 
+        report.printReport(getCustomerName() + "," +"\n your monthly interest is " + calculateInt()
+                +"\n your current balance is " + calculateCurrentBalance());
+    }
+ 
+    
+     
     public double getOpeningBalance() {
         return openingBalance;
     }
@@ -57,6 +75,14 @@ public class BankAccount {
 
     public void setAccountNo(int AccountNo) {
         this.AccountNo = AccountNo;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
     }
 
    
