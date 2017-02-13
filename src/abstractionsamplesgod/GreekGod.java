@@ -9,6 +9,18 @@ package abstractionsamplesgod;
  *
  * @author CPere
  */
-public class GreekGod {
+public class GreekGod extends MythologicalGod {
+    private String mainDomain;  //(sky/sea/earth)
+    
+
+    public String getMainDomain() {
+        return mainDomain;
+    }
+
+    public void setMainDomain(String mainDomain) {
+        this.mainDomain = mainDomain;
+    }
+
+      
     
 }

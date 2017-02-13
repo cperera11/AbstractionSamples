@@ -9,6 +9,6 @@ package abstractionsamplesgod;
  *
  * @author CPere
  */
-public class OlympianGod {
+public class OlympianGod extends GreekGod{
     
 }
