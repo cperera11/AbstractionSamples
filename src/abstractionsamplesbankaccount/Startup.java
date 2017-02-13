@@ -10,20 +10,19 @@ package abstractionsamplesbankaccount;
  * @author CPere
  */
 public class Startup {
+
     public static void main(String[] args) {
-        
-        SavingsAccount savingsAc = new SavingsAccount("Bob Smith", 435126 ,4200.0,1.5);
+
+        SavingsAccount savingsAc = new SavingsAccount("Bob Smith", 435126, 4200.0, 1.5);
         savingsAc.printReport();
-        
-        CheckingAccount checkingsAc = new CheckingAccount("Peter Pan", 87654 ,-2100.0,0.5);
+
+        CheckingAccount checkingsAc = new CheckingAccount("Peter Pan", 87654, -2100.0, 0.5);
         checkingsAc.printReport();
-        
-        BankAccount[] accounts ={savingsAc,checkingsAc };
-        
-        for(BankAccount ac : accounts){
-        ac.printReport();
+
+        BankAccount[] accounts = {savingsAc, checkingsAc};
+
+        for (BankAccount ac : accounts) {
+            ac.printReport();
         }
     }
-            
-    
 }

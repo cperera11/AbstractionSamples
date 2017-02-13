@@ -9,26 +9,22 @@ package abstractionsamplesbankaccount;
  *
  * @author CPere
  */
-public class CheckingAccount extends IndividualAccount{
-    
+public class CheckingAccount extends IndividualAccount {
+
     private double checkBookFee;
-    
+
     CheckingAccount(String name, int accountNo, double currentBalance, double overDraftRate) {
-       setCustomerName(name);
-       setAccountNo(accountNo);
-       setCurrentBalance(currentBalance);
-       setRate(overDraftRate);
+        super(name, accountNo, currentBalance, overDraftRate);
     }
 
     // calculating current balance if there is an OD
     @Override
     public double calculateCurrentBalance() {
-        double temp; 
-        if (getCurrentBalance()< 0){
-         temp = getCurrentBalance() - calculateInt();
-        }
-        else{
-         temp = getCurrentBalance(); 
+        double temp;
+        if (getCurrentBalance() < 0) {
+            temp = getCurrentBalance() - calculateInt();
+        } else {
+            temp = getCurrentBalance();
         }
         return temp;
     }
@@ -40,6 +36,4 @@ public class CheckingAccount extends IndividualAccount{
     public void setCheckBookFee(double checkBookFee) {
         this.checkBookFee = checkBookFee;
     }
-    
-       
 }

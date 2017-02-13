@@ -10,9 +10,16 @@ package abstractionsamplesbankaccount;
  * @author CPere
  */
 public class IndividualAccount extends BankAccount {
+
     private boolean atmFacility;
-    
-    private void doLinkAccounts(){
+
+    IndividualAccount(String name, int accountNo, double currentBalance, double intRate) {
+        super(name, accountNo, currentBalance, intRate);
+
+    }
+
+    private void doLinkAccounts() {
+        System.out.println("Linking accounts for" + getCustomerName());
     }
 
     public boolean isAtmFacility() {
@@ -22,7 +29,5 @@ public class IndividualAccount extends BankAccount {
     public void setAtmFacility(boolean atmFacility) {
         this.atmFacility = atmFacility;
     }
-    
-    
-}
 
+}

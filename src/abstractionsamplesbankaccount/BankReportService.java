@@ -10,15 +10,14 @@ package abstractionsamplesbankaccount;
  * @author CPere
  */
 public class BankReportService {
+
     private String report;
 
-    
-    
-    public void printReport(String report){
-            setReport(report);
-            System.out.println(getReport());
+    public void printReport(String report) {
+        setReport(report);
+        System.out.println(getReport());
     }
-    
+
     public String getReport() {
         return report;
     }
@@ -26,7 +25,4 @@ public class BankReportService {
     public void setReport(String report) {
         this.report = report;
     }
-    
-    
-    
 }

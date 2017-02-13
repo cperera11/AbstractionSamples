@@ -15,11 +15,8 @@ public class SavingsAccount extends IndividualAccount {
     private double promotionalInterestRate;
    
     SavingsAccount(String name, int accountNo, double currentBalance, double intRate) {
-       setCustomerName(name);
-       setAccountNo(accountNo);
-       setCurrentBalance(currentBalance);
-       setRate(intRate);
-           
+       super(name, accountNo, currentBalance, intRate);
+     
     }
         
 // calculate monthy interest

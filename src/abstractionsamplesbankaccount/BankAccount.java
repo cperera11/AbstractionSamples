@@ -10,20 +10,20 @@ package abstractionsamplesbankaccount;
  * @author CPere
  */
 public class BankAccount {
-    private String CustomerName;
-    private int AccountNo;
+    private String customerName;
+    private int accountNo;
     private double openingBalance;
     private double currentBalance;
     private double rate;
    
     public BankAccount() {
-        
     }
 
-    public BankAccount(String CustomerName, int AccountNo, double currentBalance) {
-        setCustomerName(CustomerName);
-        setAccountNo(AccountNo);
+    public BankAccount(String customerName, int accountNo, double currentBalance, double rate) {
+        setCustomerName(customerName);
+        setAccountNo(accountNo);
         setCurrentBalance(currentBalance);
+        setRate(rate);
     }
     
       // calculate interest
@@ -62,19 +62,19 @@ public class BankAccount {
 
     
     public String getCustomerName() {
-        return CustomerName;
+        return customerName;
     }
 
-    public void setCustomerName(String CustomerName) {
-        this.CustomerName = CustomerName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public int getAccountNo() {
-        return AccountNo;
+        return accountNo;
     }
 
     public void setAccountNo(int AccountNo) {
-        this.AccountNo = AccountNo;
+        this.accountNo = AccountNo;
     }
 
     public double getRate() {
