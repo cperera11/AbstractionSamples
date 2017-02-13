@@ -11,6 +11,8 @@ package abstractionsamplesbankaccount;
  */
 public class SavingsAccount extends IndividualAccount {
 
+    private double incentiveBonus;
+    private double promotionalInterestRate;
    
     SavingsAccount(String name, int accountNo, double currentBalance, double intRate) {
        setCustomerName(name);
@@ -19,7 +21,32 @@ public class SavingsAccount extends IndividualAccount {
        setRate(intRate);
            
     }
+        
+// calculate monthy interest
+    @Override
+    public double calculateInt() {
+        return (getCurrentBalance() * getRate())/12;
+     
+    }
+    public void doDirectDeposit(){
+    
+    }
 
+    public double getIncentiveBonus() {
+        return incentiveBonus;
+    }
+
+    public void setIncentiveBonus(double incentiveBonus) {
+        this.incentiveBonus = incentiveBonus;
+    }
+
+    public double getPromotionalInterestRate() {
+        return promotionalInterestRate;
+    }
+
+    public void setPromotionalInterestRate(double promotionalInterestRate) {
+        this.promotionalInterestRate = promotionalInterestRate;
+    }
 
 
 }

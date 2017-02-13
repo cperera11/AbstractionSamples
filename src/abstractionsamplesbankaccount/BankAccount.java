@@ -26,9 +26,9 @@ public class BankAccount {
         setCurrentBalance(currentBalance);
     }
     
-      // calculate monthy interest
+      // calculate interest
     public double calculateInt() {
-        return (getCurrentBalance() * getRate())/12;
+        return (getCurrentBalance() * getRate());
          
     }
     // calculating current balance

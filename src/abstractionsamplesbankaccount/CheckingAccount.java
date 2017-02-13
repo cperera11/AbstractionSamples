@@ -23,7 +23,7 @@ public class CheckingAccount extends IndividualAccount{
     // calculating current balance if there is an OD
     @Override
     public double calculateCurrentBalance() {
-        double temp;
+        double temp; 
         if (getCurrentBalance()< 0){
          temp = getCurrentBalance() - calculateInt();
         }
