@@ -13,7 +13,9 @@ public class SavingsAccount extends IndividualAccount {
 
     private double incentiveBonus;
     private double promotionalInterestRate;
-   
+    private boolean directDepositFacility;
+
+    
     SavingsAccount(String name, int accountNo, double currentBalance, double intRate) {
        super(name, accountNo, currentBalance, intRate);
      
@@ -26,7 +28,9 @@ public class SavingsAccount extends IndividualAccount {
      
     }
     public void doDirectDeposit(){
-    
+    if (isDirectDepositFacility() == true){
+        System.out.println("Do direct deposit");
+    }
     }
 
     public double getIncentiveBonus() {
@@ -44,6 +48,14 @@ public class SavingsAccount extends IndividualAccount {
     public void setPromotionalInterestRate(double promotionalInterestRate) {
         this.promotionalInterestRate = promotionalInterestRate;
     }
+    
+    public boolean isDirectDepositFacility() {
+        return directDepositFacility;
+    }
 
+    public void setDirectDepositFacility(boolean directDepositFacility) {
+        this.directDepositFacility = directDepositFacility;
+    }
+   
 
 }
